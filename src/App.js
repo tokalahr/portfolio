@@ -15,6 +15,15 @@ function AboutPage() {
   );
 }
 
+function ExperiencePage() {
+  return (
+    <section className="page-content">
+      <h1>Experience</h1>
+      <p>Experience text.</p>
+    </section>
+   );
+}
+
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -32,6 +41,7 @@ function App() {
                 <li><NavLink to="/projects">Projects</NavLink></li>
                 <li><NavLink to="/about">About Me</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
+                <li><NavLink to="/experience">Experience</NavLink></li>
               </ul>
             </nav>
             <button
@@ -50,6 +60,7 @@ function App() {
               <Route path="/projects" element={<EmptyPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<EmptyPage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
             </Routes>
           </main>
         </div>
