@@ -6,22 +6,37 @@ function EmptyPage() {
   return <section className="page-content" />;
 }
 
-function AboutPage() {
+function ProjectsPage() {
   return (
     <section className="page-content">
-      <h1>About Me</h1>
-      <p>About me text.</p>
+      <h1>Nyx</h1>
+      <p>
+        GitHub Link Placeholder:{' '}
+        <a href="https://github.com/tokalahr/hackai-26" aria-label="https://github.com/tokalahr/hackai-26" title="Nyx GitHub Repository">
+        </a>
+      </p>
     </section>
   );
 }
 
-function ExperiencePage() {
+function AboutPage() {
   return (
     <section className="page-content">
-      <h1>Experience</h1>
-      <p>Experience text.</p>
+      <h1>About Me</h1>
+      <p>Hi there! I’m Harshith, a sophomore Computer Science student at University of Texas at Dallas.</p>
+      <p>
+        My journey into tech started with a curiosity for how things work under the hood, which
+        quickly evolved into a passion for building efficient, scalable software. Currently, I’m
+        focusing my studies on Data Structures and Algorithms while honing my
+        skills in Java and Python.
+      </p>
+      <p>
+        When I’m not in the lab, you can find me working on my latest side project, Nyx, or participating in Hackathons. I’m currently looking for
+        internship opportunities where I can apply my classroom knowledge to real-world
+        challenges.
+      </p>
     </section>
-   );
+  );
 }
 
 function App() {
@@ -41,7 +56,6 @@ function App() {
                 <li><NavLink to="/projects">Projects</NavLink></li>
                 <li><NavLink to="/about">About Me</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
-                <li><NavLink to="/experience">Experience</NavLink></li>
               </ul>
             </nav>
             <button
@@ -57,10 +71,9 @@ function App() {
           <main className="container">
             <Routes>
               <Route path="/" element={<Navigate to="/about" replace />} />
-              <Route path="/projects" element={<EmptyPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<EmptyPage />} />
-              <Route path="/experience" element={<ExperiencePage />} />
             </Routes>
           </main>
         </div>
